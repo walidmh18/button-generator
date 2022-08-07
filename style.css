@@ -259,6 +259,7 @@ input[type="color"]{
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     width: 100%;
+    box-sizing: border-box;
     overflow: hidden;
 
 }
@@ -388,4 +389,10 @@ code{
     background: #44475c;
     margin-bottom: 0;
     border-bottom: 1px solid var(--dark-color);
+}
+
+@media screen and (max-width:1200px) {
+    .secondPageContainer{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
