@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customize your button</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="onedark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js" defer></script>
+    <script src="app.js" defer></script>
+    <script src="css.min.js" defer></script>
+    <script src="javascript.min.js" defer></script>
+    <script src="xml.min.js" defer></script>
+</head>
+<body>
+    
+<div class="firstPage">
+    <div class="text">
+        <h1>Customize A CSS Button Online!</h1>
+        <button onclick="moveToSecondPage()">Start Customization Now</button>
+    </div>
+    <div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+</div >
+</div>
+<div class="secondPage">
+    <div class="header">
+        <h1>
+            Create An Awesome Button
+        </h1>
+    </div>
+    <div class="secondPageContainer">
+        <div class="options">
+            <h1>Settings</h1>
+        <div class="settings">
+            <div class="general">
+                <h2 class="divisionTitle">
+                    General
+                </h2>
+                <div>
+                    <label for="disabled">Disabled:</label>
+                    <input type="checkbox" name="disabled" id="disabled">
+                </div>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Name (optional)">
+                </div>
+                <div>
+                    <label for="type">Type:</label>
+                    <select name="type" id="type">
+                        <option value="button">button</option>
+                        <option value="reset">reset</option>
+                        <option value="submit">submit</option>
+                    </select>
+                </div>
+            </div>
+            <div class="typo">
+                <h2 class="divisionTitle">
+                    Text + Typography
+                </h2>
+                <div>
+                    <label for="innerText">Text:</label>
+                    <input type="text" id="innerText" placeholder="text inside the button" value="Click Me">
+                    
+                </div>
+                <div>
+                    <label for="colorPicker">Text Color:</label>
+                    <input type="color" name="colorPicker" id="colorPicker" value="#ffffff">
+                    <label for="colorPicker" class="colorPickerPreview colorInputContainer"><div class="colorInput"></div></label>
+                    
+                </div>
+                <div>
+                    <label for="fontSize">Font Size(px):</label>
+                    <input type="range" name="fontSize" id="fontSize"  min="0" max="50" value="16">
+                    <span id="fontSizeIndicator"></span>
+                </div>
+                <div>
+                    <label for="fontweight">Font Weight:</label>
+                    <select name="fontweight" id="fontweight">
+                        <option value="300">light</option>
+                        <option value="400" selected>regular</option>
+                        <option value="600">bold</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="textShadow">Text Shadow:</label>
+                    <input type="checkbox" name="textShadow" id="textShadow">
+                </div>
+                <div class="disabled textShadow">
+                    <div>
+                        <label for="textshX">X Shadow:</label>
+                        <input type="range" name="textshX" id="textshX" min="-50" max="50" value="5">
+                        <span id="textshX_"></span>
+                    </div>
+                    <div>
+                        <label for="textshY">Y Shadow:</label>
+                        <input type="range" name="textshY" id="textshY" min="-50" max="50" value="5">
+                        <span id="textshY_"></span>
+                    </div>
+                    <div>
+                        <label for="textshBlur">Blur:</label>
+                        <input type="range" name="textshBlur" id="textshBlur" min="0" max="50" value="5">
+                        <span id="textshBlur_"></span>
+                    </div>
+                    <div>
+                        <label for="textshColor">Color:</label>
+                        <input type="color" name="textshColor" id="textshColor" value="#72a1cb">
+                        <label for="textshColor" class="colorPickerPreview colorInputContainer"><div class="colorInput" id="textshColorPreview"></div></label>
+
+                    </div>
+                </div>
+            </div>
+            <div class="style">
+                <h2 class="divisionTitle">
+                    Button Style
+                </h2>
+                <div>
+                    <label for="bgcolor">Background Color:</label>
+                    <input type="color" name="bgcolor" id="bgcolor" value="#72a1cb">
+                    <label for="bgcolor" class="colorPickerPreview colorInputContainer"><div class="colorInput"></div></label>
+                    
+
+                    
+                </div>
+                <div class="disbled">
+                    <div>
+                        <label for="bgGradient">Background Gradient:</label>
+                        <input type="checkbox" id="bgGradient" name="bgGradient">
+                    </div>
+                    <div id="bgGradientForm" class="disabled">
+                        <div>
+                            <label for="bgColor1">Color 1:</label>
+                            <input type="color" name="bgColor1" id="bgColor1" value="#72a1cb">
+                            <label for="bgColor1" class="colorPickerPreview colorInputContainer"><div class="colorInput" id="color1Preview"></div></label>
+                            
+                        </div>
+                        <div>
+                            <label for="bgColor2">Color 2:</label>
+                            <input type="color" name="bgColor2" id="bgColor2" value="#83b2dc">
+                            <label for="bgColor2" class="colorPickerPreview colorInputContainer"><div class="colorInput" id="color2Preview"></div></label>
+                            
+                        </div>
+                        <div>
+                            <label for="graidentDir">Gradient Direction</label>
+                            <input type="range" name="graidentDir" id="graidentDir" min="0" max="360" value="90">
+                            <span id="gradientDir_"></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="primaryPadding">
+                    <label for="padding">Padding:</label>
+                    <input type="range" name="padding" id="padding" min="0" max="50" value="10">
+                    <span id="padding_"></span>
+                    
+                </div>
+                <div>
+                    <label for="detailedPaddings">Detailed Paddings</label>
+                    <input type="checkbox" name="detailedPaddings" id="detailedPaddings">
+
+                </div>
+                <div class="secondaryPadding disabled">
+                    <div>
+                        <label for="paddingTop">Padding Top</label>
+                        <input type="range" name="paddingTop" id="paddingTop"  min="0" max="50" value="0">
+                        <span id="paddingTop_"></span>
+                    </div>
+                    <div>
+                        <label for="paddingRight">Padding Right</label>
+                        <input type="range" name="paddingRight" id="paddingRight"  min="0" max="50" value="0">
+                        <span id="paddingRight_"></span>
+                    </div>
+                    <div>
+                        <label for="paddingBottom">Padding Bottom</label>
+                        <input type="range" name="paddingBottom" id="paddingBottom"  min="0" max="50" value="0">
+                        <span id="paddingBottom_"></span>
+                    </div>
+                    <div>
+                        <label for="paddingLeft">Padding Left</label>
+                        <input type="range" name="paddingLeft" id="paddingLeft"  min="0" max="50" value="0">
+                        <span id="paddingLeft_"></span>
+                    </div>
+                </div>
+
+<!--                                 -->
+                <div class="primaryBR">
+                    <label for="borderRadius">Border Radius:</label>
+                    <input type="range" name="borderRadius" id="borderRadius" min="0" max="50" value="5">
+                    <span id="borderRadius_"></span>
+                    
+                </div>
+                <div>
+                    <label for="detailedBorderRadius">Detailed Border Radius</label>
+                    <input type="checkbox" name="detailedBorderRadius" id="detailedBorderRadius">
+
+                </div>
+                <div class="secondaryBR disabled">
+                    <div>
+                        <label for="borderRadiusTopRight">border Radius Top Right:</label>
+                        <input type="range" name="borderRadiusTopRight" id="borderRadiusTopRight"  min="0" max="50" value="0">
+                        <span id="borderRadiusTopRight_"></span>
+                    </div>
+                    <div>
+                        <label for="borderRadiusBottomRight">border Radius Bottom Right</label>
+                        <input type="range" name="borderRadiusBottomRight" id="borderRadiusBottomRight"  min="0" max="50" value="0">
+                        <span id="borderRadiusBottomRight_"></span>
+                    </div>
+                    <div>
+                        <label for="borderRadiusBottomLeft">borderRadiusBottomLeft</label>
+                        <input type="range" name="borderRadiusBottomLeft" id="borderRadiusBottomLeft"  min="0" max="50" value="0">
+                        <span id="borderRadiusBottomLeft_"></span>
+                    </div>
+                    <div>
+                        <label for="borderRadiusTopLeft">borderRadiusTopLeft</label>
+                        <input type="range" name="borderRadiusTopLeft" id="borderRadiusTopLeft"  min="0" max="50" value="0">
+                        <span id="borderRadiusTopLeft_"></span>
+                    </div>
+                </div>
+                <!--               -->
+
+
+
+                <h3 style="margin-top: 0.25rem;">border</h3>
+                <div class="primaryBorder">
+                    <label for="borderColor">Color:</label>
+                    <input type="color" name="borderColor" id="borderColor" value="#ffffff">
+                    <label for="borderColor" class="colorPickerPreview colorInputContainer"><div class="colorInput" id="borderColor_"></div></label>
+
+                    <label for="borderWidth">Width:</label>
+                    <input type="range" name="borderWidth" id="borderWidth" min="0" max="20" value="0">
+                    <span id="borderWidth_"></span>
+                    <label for="borderStyle">Style:</label>
+                    <select name="borderStyle" id="borderStyle">
+                        <option value="solid" selected>solid</option>
+                        <option value="dotted">dotted</option>
+                        <option value="double">double</option>
+                        <option value="groove">groove</option>
+                        <option value="ridge">ridge</option>
+                        <option value="inset">inset</option>
+                        <option value="outset">outset</option>
+                    </select>
+                    
+                </div>
+                <div>
+                    <label for="detailedBorder">Detailed Border</label>
+                    <input type="checkbox" name="detailedBorder" id="detailedBorder">
+
+                </div>
+                <div class="disabled secondaryBorder">
+                    <div>
+                        <h4>Border Top</h4>
+                        <label for="borderTopColor">Color:</label>
+                        <input type="color" name="borderTopColor" id="borderTopColor" value="#ffffff">
+                        <label for="borderTopColor" class="colorPickerPreview colorInputContainer"><div class="colorInput" id="borderTopColorPreview"></div></label>
+
+                        <label for="borderTopWidth">Width:</label>
+                        <input type="range" name="borderTopWidth" id="borderTopWidth" min="0" max="20" value="0">
+                        <span id="borderTopWidth_"></span>
+                        <label for="borderTopStyle">Style:</label>
+                        <select name="borderTopStyle" id="borderTopStyle">
+                            <option value="solid" selected>solid</option>
+                            <option value="dotted">dotted</option>
+                            <option value="double">double</option>
+                            <option value="groove">groove</option>
+                            <option value="ridge">ridge</option>
+                            <option value="inset">inset</option>
+                            <option value="outset">outset</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h4>Border Right</h4>
+                        <label for="borderRightColor">Color:</label>
+                        <input type="color" name="borderRightColor" id="borderRightColor" value="#ffffff">
+                        <label for="borderRightColor" class="colorPickerPreview colorInputContainer"><div class="colorInput" id="borderRightColorPreview"></div></label>
+
+                        <label for="borderRightWidth">Width:</label>
+                        <input type="range" name="borderRightWidth" id="borderRightWidth" min="0" max="20" value="0">
+                        <span id="borderRightWidth_"></span>
+                        <label for="borderRightStyle">Style:</label>
+                        <select name="borderRightStyle" id="borderRightStyle">
+                            <option value="solid" selected>solid</option>
+                            <option value="dotted">dotted</option>
+                            <option value="double">double</option>
+                            <option value="groove">groove</option>
+                            <option value="ridge">ridge</option>
+                            <option value="inset">inset</option>
+                            <option value="outset">outset</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h4>Border Bottom</h4>
+                        <label for="borderBottomColor">Color:</label>
+                        <input type="color" name="borderBottomColor" id="borderBottomColor" value="#ffffff">
+                        <label for="borderBottomColor" class="colorPickerPreview colorInputContainer"><div class="colorInput" id="borderBottomColorPreview"></div></label>
+
+                        <label for="borderBottomWidth">Width:</label>
+                        <input type="range" name="borderBottomWidth" id="borderBottomWidth" min="0" max="20" value="0">
+                        <span id="borderBottomWidth_"></span>
+                        <label for="borderBottomStyle">Style:</label>
+                        <select name="borderBottomStyle" id="borderBottomStyle">
+                            <option value="solid" selected>solid</option>
+                            <option value="dotted">dotted</option>
+                            <option value="double">double</option>
+                            <option value="groove">groove</option>
+                            <option value="ridge">ridge</option>
+                            <option value="inset">inset</option>
+                            <option value="outset">outset</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h4>Border Left</h4>
+                        <label for="borderLeftColor">Color:</label>
+                        <input type="color" name="borderLeftColor" id="borderLeftColor" value="#ffffff">
+                        <label for="borderLeftColor" class="colorPickerPreview colorInputContainer"><div class="colorInput" id="borderLeftColorPreview"></div></label>
+
+                        <label for="borderLeftWidth">Width:</label>
+                        <input type="range" name="borderLeftWidth" id="borderLeftWidth" min="0" max="20" value="0">
+                        <span id="borderLeftWidth_"></span>
+                        <label for="borderLeftStyle">Style:</label>
+                        <select name="borderLeftStyle" id="borderLeftStyle">
+                            <option value="solid" selected>solid</option>
+                            <option value="dotted">dotted</option>
+                            <option value="double">double</option>
+                            <option value="groove">groove</option>
+                            <option value="ridge">ridge</option>
+                            <option value="inset">inset</option>
+                            <option value="outset">outset</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="boxShadow">Box Shadow:</label>
+                    <input type="checkbox" name="boxShadow" id="boxShadow">
+                </div>
+                <div class="disabled boxShadow">
+                    <div>
+                        <label for="boxshX">X Shadow:</label>
+                        <input type="range" name="boxshX" id="boxshX" min="-50" max="50" value="0">
+                        <span id="boxshX"></span>
+                    </div>
+                    <div>
+                        <label for="boxshY">Y Shadow:</label>
+                        <input type="range" name="boxshY" id="boxshY" min="-50" max="50" value="0">
+                        <span id="boxshY"></span>
+                    </div>
+                    <div>
+                        <label for="boxshBlur">Blur:</label>
+                        <input type="range" name="boxshBlur" id="boxshBlur" min="0" max="50" value="0">
+                        <span id="boxshY"></span>
+                    </div>
+                    <div>
+                        <label for="boxshColor">Color:</label>
+                        <input type="color" name="boxshColor" id="boxshColor">
+                        <label for="boxshColor" class="colorPickerPreview colorInputContainer"><div class="colorInput"></div></label>
+                        <label for="boxshAlpha">Transparency:</label>
+                        <input id="boxshAlpha" type="range" min="0" max="100" value="100" />
+                        <span id="alpha_"></span>
+                    </div>
+                </div>
+
+                
+
+
+
+
+
+            </div>
+        </div>
+        </div>
+
+        <div class="output">
+            <h1>Preview</h1>
+            <div class="preview"><button class="MyBtn" id="MyBtn"></button></div>
+            <h1>Code</h1>
+            <div class="code">
+                <div class="generatedCode">
+                    <div class="codePreviewTitle">
+                        index.html
+                    </div>
+                    <pre><code class="htmlCodePreview language-html"></code>
+                    
+                    </pre>
+                    <div class="codePreviewTitle">
+                        style.css
+                    </div>
+                    <pre>
+<code class="cssCodePreview language-css"></code>
+</pre>
+
+                </div>
+                <button class="generate" onclick="generateCode()">Generate</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
